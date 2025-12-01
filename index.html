@@ -3,229 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHICKEN GEN Z — Ayam Enak Harga Pelajar</title>
+<title>CHICKEN GEN Z — Ayam Goreng Varian Rasa</title>
 
 <style>
+    /* ====== GLOBAL ====== */
     body {
-        font-family: "Inter", Arial, sans-serif;
         margin: 0;
-        background: #111;
+        font-family: "Poppins", sans-serif;
+        background: #0a0a0f;
         color: #fff;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 
-    /* HEADER */
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-shadow: 0 0 12px #ff2d55;
+    }
+
+    /* ====== NEON CARD STYLE ====== */
+    .card {
+        background: #111119;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 0 15px #ff2d5533;
+        margin: 20px auto;
+        width: 88%;
+        animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+        from {opacity: 0; transform: translateY(25px);}
+        to   {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ====== HEADER ====== */
     header {
-        background: #1b1b1b;
-        padding: 15px 30px;
         display: flex;
         justify-content: center;
-        gap: 35px;
         align-items: center;
+        gap: 25px;
+        padding: 18px 10px;
+        background: #111118;
+        box-shadow: 0 0 10px #ff2d5533;
         position: sticky;
         top: 0;
-        z-index: 100;
-        border-bottom: 1px solid #333;
+        z-index: 999;
     }
 
     header a {
         color: #fff;
         text-decoration: none;
-        padding: 10px 18px;
+        padding: 10px 15px;
         border-radius: 10px;
         transition: 0.3s;
-        font-weight: 600;
-        background: #222;
+        font-weight: 500;
     }
 
     header a:hover {
-        background: #ff3b3b;
+        background: #ff2d55;
+        box-shadow: 0 0 15px #ff2d55;
     }
 
     .logo {
-        font-size: 22px;
-        font-weight: 900;
-        color: #ff3b3b;
-        padding: 10px 18px;
-        border-radius: 12px;
-        background: #222;
-        border: 2px solid #ff3b3b;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ff2d55;
+        text-shadow: 0 0 15px #ff2d55;
     }
 
-    /* VIDEO HERO */
-    .hero-video {
+    /* ====== HERO VIDEO ====== */
+    .hero {
         width: 100%;
-        margin-top: 0;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
     }
 
-    video {
-        width: 100%;
-        border-radius: 0;
-    }
-
-    /* SECTION CONTAINER */
-    .section-box {
-        background: #1f1f1f;
-        margin: 40px auto;
-        padding: 30px;
-        width: 85%;
+    .hero video {
+        width: 90%;
         border-radius: 20px;
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+        box-shadow: 0 0 20px #ff2d55aa;
     }
 
-    h2 {
-        margin-top: 0;
-        border-bottom: 2px solid #ff3b3b;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    /* VARIAN RASA */
+    /* ====== MENU CARDS (3D NEON) ====== */
     .menu-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
+        width: 90%;
+        margin: 20px auto;
     }
 
     .menu-item {
-        background: #262626;
+        background: #14141c;
+        border-radius: 20px;
         padding: 20px;
         text-align: center;
+        box-shadow: 0 0 15px #ff2d5533;
+        transition: 0.35s;
+        transform-style: preserve-3d;
+    }
+
+    .menu-item img {
+        width: 100%;
         border-radius: 15px;
-        font-weight: 600;
-        transition: 0.3s;
-        border: 1px solid #333;
+        box-shadow: 0 0 10px #ff2d5533;
     }
 
     .menu-item:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-        background: #ff3b3b;
+        transform: translateY(-10px) rotateX(8deg) rotateY(-8deg);
+        box-shadow: 0 0 25px #ff2d55;
     }
 
-    /* FORM */
-    form input, form select, form textarea {
-        width: 100%;
+    /* ====== FORM ====== */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input, select, textarea {
         padding: 12px;
-        margin-top: 10px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        background: #2b2b2b;
+        background: #1a1a23;
+        border: 1px solid #ff2d5533;
         color: #fff;
+        border-radius: 10px;
     }
 
     button {
-        background: #ff3b3b;
+        padding: 12px;
         border: none;
-        padding: 14px 20px;
-        border-radius: 10px;
+        border-radius: 12px;
+        background: #ff2d55;
         color: #fff;
-        font-weight: bold;
-        width: 100%;
-        margin-top: 15px;
+        font-size: 1rem;
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.25s;
+        box-shadow: 0 0 12px #ff2d55aa;
     }
 
     button:hover {
-        background: #ff5555;
+        background: #ff446d;
+        box-shadow: 0 0 25px #ff2d55;
     }
 
-    /* KONTAK */
-    .contact-list a {
-        display: block;
-        color: #fff;
-        margin: 10px 0;
-        padding: 12px;
-        background: #222;
-        border-radius: 10px;
-        text-decoration: none;
+    /* ====== CONTACT ICONS ====== */
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .contact-icons a {
+        color: #ff2d55;
+        text-shadow: 0 0 18px #ff2d55;
         transition: 0.3s;
-        font-weight: 600;
     }
 
-    .contact-list a:hover {
-        background: #ff3b3b;
+    .contact-icons a:hover {
+        color: #fff;
+        text-shadow: 0 0 20px #fff;
     }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header>
-    <a href="#about">About Me</a>
-    <a href="#varian">Varian Rasa</a>
-
+    <a href="#about">About</a>
+    <a href="#menu">Varian Rasa</a>
     <div class="logo">CHICKEN GEN Z</div>
-
-    <a href="#form">Form</a>
-    <a href="#kontak">Kontak</a>
+    <a href="#form">Order</a>
+    <a href="#contact">Kontak</a>
 </header>
 
-<!-- VIDEO HERO -->
-<div class="hero-video">
-    <video src="videoku.mp4" autoplay loop muted playsinline></video>
+<!-- ================= VIDEO HERO ================= -->
+<div class="hero">
+    <video autoplay muted loop>
+        <source src="videomu.mp4" type="video/mp4">
+    </video>
 </div>
 
-<!-- ABOUT SECTION -->
-<div id="about" class="section-box">
+<!-- ================= ABOUT ================= -->
+<section id="about" class="card">
     <h2>About Me</h2>
     <p>
-        CHICKEN GEN Z adalah UMKM ayam goreng dengan cita rasa khas anak muda.  
-        Kami menghadirkan ayam crispy dengan 5 varian rasa favorit, harga pelajar,  
-        dan kualitas terbaik. Cocok untuk nongkrong, bekal sekolah, hingga makan bareng keluarga.
+        CHICKEN GEN Z adalah UMKM ayam goreng varian rasa yang dibuat khusus untuk lidah anak muda.
+        Harga ramah pelajar, rasa premium — cocok untuk nongkrong, mabar, atau pesan dari kosan!
     </p>
-</div>
+</section>
 
-<!-- VARIAN RASA -->
-<div id="varian" class="section-box">
+<!-- ================= MENU VARIAN RASA ================= -->
+<section id="menu" class="card">
     <h2>Varian Rasa</h2>
 
     <div class="menu-grid">
-        <div class="menu-item">KEJU</div>
-        <div class="menu-item">BBQ</div>
-        <div class="menu-item">BLACK PEPPER</div>
-        <div class="menu-item">HOT SPICY</div>
-        <div class="menu-item">BBQ SPICY</div>
-    </div>
-</div>
 
-<!-- FORM PEMESANAN -->
-<div id="form" class="section-box">
+        <div class="menu-item">
+            <img src="keju.jpg" alt="Keju">
+            <h3>KEJU</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="bbq.jpg" alt="BBQ">
+            <h3>BBQ</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="blackpepper.jpg" alt="Black Pepper">
+            <h3>BLACK PEPPER</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="hotspicy.jpg" alt="Hot Spicy">
+            <h3>HOT SPICY</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="bbqspicy.jpg" alt="BBQ Spicy">
+            <h3>BBQ SPICY</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= ORDER FORM ================= -->
+<section id="form" class="card">
     <h2>Form Pemesanan</h2>
 
-    <form action="https://api.whatsapp.com/send?phone=6281226671539" method="GET" target="_blank">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
+    <form action="https://wa.me/6281226671539" method="GET">
+        <input type="text" name="nama" placeholder="Nama Kamu" required>
         <input type="text" name="alamat" placeholder="Alamat Lengkap" required>
 
-        <select name="varian">
-            <option value="KEJU">KEJU</option>
-            <option value="BBQ">BBQ</option>
-            <option value="BLACK PEPPER">BLACK PEPPER</option>
-            <option value="HOT SPICY">HOT SPICY</option>
-            <option value="BBQ SPICY">BBQ SPICY</option>
+        <select name="menu">
+            <option>KEJU</option>
+            <option>BBQ</option>
+            <option>BLACK PEPPER</option>
+            <option>HOT SPICY</option>
+            <option>BBQ SPICY</option>
         </select>
 
-        <input type="number" name="jumlah" placeholder="Jumlah Porsi" required>
+        <input type="number" name="jumlah" placeholder="Jumlah Pesanan" required>
 
-        <textarea name="catatan" rows="4" placeholder="Catatan tambahan..."></textarea>
+        <textarea name="catatan" placeholder="Catatan Tambahan"></textarea>
 
-        <button type="submit">Pesan Sekarang via WA</button>
+        <button type="submit">Pesan Sekarang 🚀</button>
     </form>
-</div>
+</section>
 
-<!-- KONTAK -->
-<div id="kontak" class="section-box">
-    <h2>Kontak Kami</h2>
-    <div class="contact-list">
-        <a href="https://wa.me/6281226671539" target="_blank">📱 WhatsApp: 081226671539</a>
-        <a href="#" target="_blank">📸 Instagram</a>
-        <a href="#" target="_blank">𝕏 Twitter</a>
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="card">
+    <h2>Kontak</h2>
+
+    <div class="contact-icons">
+        <a href="https://wa.me/6281226671539">🟢</a>
+        <a href="#">📸</a>
+        <a href="#">❌</a>
     </div>
-</div>
+
+    <p style="text-align:center; margin-top:10px;">CHICKEN GEN Z — Ayam Goreng Varian Rasa</p>
+</section>
 
 </body>
 </html>
