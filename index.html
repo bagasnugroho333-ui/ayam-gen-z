@@ -10,7 +10,7 @@
     body {
         margin: 0;
         font-family: "Poppins", sans-serif;
-        background: #0a0a0f;
+        background: #050507;
         color: #fff;
         scroll-behavior: smooth;
         overflow-x: hidden;
@@ -23,7 +23,12 @@
         text-shadow: 0 0 12px #ff2d55;
     }
 
-    /* ====== NEON CARD STYLE ====== */
+    /* Fade Up Animation */
+    @keyframes fadeUp {
+        from {opacity: 0; transform: translateY(25px);}
+        to   {opacity: 1; transform: translateY(0);}
+    }
+
     .card {
         background: #111119;
         border-radius: 20px;
@@ -34,11 +39,6 @@
         animation: fadeUp 1s ease forwards;
     }
 
-    @keyframes fadeUp {
-        from {opacity: 0; transform: translateY(25px);}
-        to   {opacity: 1; transform: translateY(0);}
-    }
-
     /* ====== HEADER ====== */
     header {
         display: flex;
@@ -46,7 +46,7 @@
         align-items: center;
         gap: 25px;
         padding: 18px 10px;
-        background: #111118;
+        background: #0d0d13;
         box-shadow: 0 0 10px #ff2d5533;
         position: sticky;
         top: 0;
@@ -77,7 +77,7 @@
     /* ====== HERO VIDEO ====== */
     .hero {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 15px;
         display: flex;
         justify-content: center;
     }
@@ -85,20 +85,20 @@
     .hero video {
         width: 90%;
         border-radius: 20px;
-        box-shadow: 0 0 20px #ff2d55aa;
+        box-shadow: 0 0 25px #ff2d55aa;
     }
 
-    /* ====== MENU CARDS (3D NEON) ====== */
+    /* ====== MENU GRID ====== */
     .menu-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
+        gap: 25px;
         width: 90%;
         margin: 20px auto;
     }
 
     .menu-item {
-        background: #14141c;
+        background: #15151f;
         border-radius: 20px;
         padding: 20px;
         text-align: center;
@@ -110,11 +110,11 @@
     .menu-item img {
         width: 100%;
         border-radius: 15px;
-        box-shadow: 0 0 10px #ff2d5533;
+        box-shadow: 0 0 12px #ff2d5533;
     }
 
     .menu-item:hover {
-        transform: translateY(-10px) rotateX(8deg) rotateY(-8deg);
+        transform: translateY(-12px) rotateX(10deg) rotateY(-10deg);
         box-shadow: 0 0 25px #ff2d55;
     }
 
@@ -150,7 +150,7 @@
         box-shadow: 0 0 25px #ff2d55;
     }
 
-    /* ====== CONTACT ICONS ====== */
+    /* ====== CONTACT ====== */
     .contact-icons {
         display: flex;
         justify-content: center;
@@ -169,6 +169,7 @@
         color: #fff;
         text-shadow: 0 0 20px #fff;
     }
+
 </style>
 </head>
 
@@ -177,7 +178,7 @@
 <!-- ================= HEADER ================= -->
 <header>
     <a href="#about">About</a>
-    <a href="#menu">Varian Rasa</a>
+    <a href="#menu">Varian</a>
     <div class="logo">CHICKEN GEN Z</div>
     <a href="#form">Order</a>
     <a href="#contact">Kontak</a>
@@ -185,8 +186,8 @@
 
 <!-- ================= VIDEO HERO ================= -->
 <div class="hero">
-    <video autoplay muted loop>
-        <source src="videomu.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline>
+        <source src="ayamkuu-hero-video.mp4" type="video/mp4">
     </video>
 </div>
 
@@ -195,7 +196,7 @@
     <h2>About Me</h2>
     <p>
         CHICKEN GEN Z adalah UMKM ayam goreng varian rasa yang dibuat khusus untuk lidah anak muda.
-        Harga ramah pelajar, rasa premium — cocok untuk nongkrong, mabar, atau pesan dari kosan!
+        Harga ramah pelajar, rasa premium, dan vibe modern cocok buat nongkrong, mabar, ataupun pesan dari kosan.
     </p>
 </section>
 
