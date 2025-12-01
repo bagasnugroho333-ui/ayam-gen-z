@@ -42,9 +42,10 @@
     /* ====== HEADER ====== */
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 12px 20px;
+        gap: 25px;
+        padding: 18px 10px;
         background: #0d0d13;
         box-shadow: 0 0 10px #ff2d5533;
         position: sticky;
@@ -52,27 +53,7 @@
         z-index: 999;
     }
 
-    .header-left {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .header-left img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: 0 0 12px #ff2d55;
-    }
-
-    .logo {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #ff2d55;
-        text-shadow: 0 0 15px #ff2d55;
-    }
-
-    nav a {
+    header a {
         color: #fff;
         text-decoration: none;
         padding: 10px 15px;
@@ -81,9 +62,16 @@
         font-weight: 500;
     }
 
-    nav a:hover {
+    header a:hover {
         background: #ff2d55;
         box-shadow: 0 0 15px #ff2d55;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ff2d55;
+        text-shadow: 0 0 15px #ff2d55;
     }
 
     /* ====== HERO VIDEO ====== */
@@ -117,14 +105,17 @@
         box-shadow: 0 0 15px #ff2d5533;
         transition: 0.35s;
         transform-style: preserve-3d;
-        cursor: pointer;
     }
 
     .menu-item img {
         width: 100%;
         border-radius: 15px;
         box-shadow: 0 0 12px #ff2d5533;
-        transition: 0.3s;
+    }
+
+    .menu-item:hover {
+        transform: translateY(-12px) rotateX(10deg) rotateY(-10deg);
+        box-shadow: 0 0 25px #ff2d55;
     }
 
     .menu-item h3 {
@@ -134,17 +125,6 @@
     .menu-item p {
         font-size: 0.95rem;
         color: #ffb3c1;
-    }
-
-    /* Hover effect premium 3D + glow */
-    .menu-item:hover {
-        transform: translateY(-15px) rotateX(10deg) rotateY(-10deg);
-        box-shadow: 0 0 25px #ff2d55, 0 10px 30px #ff2d5533;
-    }
-
-    .menu-item:hover img {
-        filter: brightness(1.2);
-        box-shadow: 0 0 20px #ff2d55, 0 0 30px #ff2d5533;
     }
 
     /* ====== FORM ====== */
@@ -206,16 +186,11 @@
 
 <!-- ================= HEADER ================= -->
 <header>
-    <div class="header-left">
-        <img src="logo.png" alt="Logo CHICKEN GEN Z">
-        <div class="logo">CHICKEN GEN Z</div>
-    </div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#menu">Varian</a>
-        <a href="#form">Order</a>
-        <a href="#contact">Kontak</a>
-    </nav>
+    <a href="#about">About</a>
+    <a href="#menu">Varian</a>
+    <div class="logo">CHICKEN GEN Z</div>
+    <a href="#form">Order</a>
+    <a href="#contact">Kontak</a>
 </header>
 
 <!-- ================= VIDEO HERO ================= -->
