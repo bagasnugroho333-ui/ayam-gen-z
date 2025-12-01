@@ -42,10 +42,9 @@
     /* ====== HEADER ====== */
     header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 25px;
-        padding: 18px 10px;
+        padding: 15px 20px;
         background: #0d0d13;
         box-shadow: 0 0 10px #ff2d5533;
         position: sticky;
@@ -53,7 +52,19 @@
         z-index: 999;
     }
 
-    header a {
+    .logo-img {
+        width: 60px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    nav a {
         color: #fff;
         text-decoration: none;
         padding: 10px 15px;
@@ -62,12 +73,12 @@
         font-weight: 500;
     }
 
-    header a:hover {
+    nav a:hover {
         background: #ff2d55;
         box-shadow: 0 0 15px #ff2d55;
     }
 
-    .logo {
+    .logo-text {
         font-size: 1.4rem;
         font-weight: bold;
         color: #ff2d55;
@@ -178,7 +189,6 @@
         color: #fff;
         text-shadow: 0 0 20px #fff;
     }
-
 </style>
 </head>
 
@@ -186,11 +196,15 @@
 
 <!-- ================= HEADER ================= -->
 <header>
-    <a href="#about">About</a>
-    <a href="#menu">Varian</a>
-    <div class="logo">CHICKEN GEN Z</div>
-    <a href="#form">Order</a>
-    <a href="#contact">Kontak</a>
+    <img src="IMG-20251201-WA0005[1].jpg" class="logo-img" alt="Chicken Gen Z Logo">
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Varian</a>
+        <div class="logo-text">CHICKEN GEN Z</div>
+        <a href="#form">Order</a>
+        <a href="#contact">Kontak</a>
+    </nav>
 </header>
 
 <!-- ================= VIDEO HERO ================= -->
